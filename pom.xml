@@ -71,7 +71,7 @@
     </dependency>
 
     <dependency>
-      <!-- this dependency is aligned with the vert.x core one do avoid dependencies to get another version -->
+      <!-- this dependency is aligned with the vert.x core one to avoid dependencies getting another version -->
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <optional>true</optional>
