@@ -45,6 +45,13 @@ public class JDBCDecoderTest {
 
     params.add(new Object[]{"f47ac10b-58cc-4372-a567-0e02b2c3d479", UUID.fromString("f47ac10b-58cc-4372-a567-0e02b2c3d479"), UUID.class, JDBCType.BINARY});
 
+    // Test an ASCII-only CLOB
+    final String asciiString = "Test ASCII-only CLOB with decoder.";
+    params.add(new Object[]{asciiString, asciiString, String.class, JDBCType.CLOB});
+    // Test a UTF-8, non-ASCII CLOB
+    final String utf8String = "这不是英文… Test UTF-8, non-ASCII CLOB with decoder.";
+    params.add(new Object[]{utf8String, utf8String, String.class, JDBCType.CLOB});
+
     return params;
   }
 
